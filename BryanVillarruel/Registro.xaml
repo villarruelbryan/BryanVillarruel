@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BryanVillarruel.Registro">
+    <ContentPage.Content>
+        <StackLayout>
+            <Frame BackgroundColor="#2196F3" Padding="0" CornerRadius="0">
+                <Label x:Name="lblNombre" HorizontalTextAlignment="End" TextColor="White" FontSize="22"/>
+            </Frame>
+            <Grid BackgroundColor="#2196F3" RowSpacing="2" ColumnSpacing="2" >
+                <Label Grid.Row="0" Grid.Column="0" Text="Nombre: " TextColor="White" FontSize="20"></Label>
+                <Entry Grid.Row="0" Grid.Column="1" x:Name="txtNombre" Placeholder="Ingresar Nombre" TextColor="White"></Entry>
+                <Label Grid.Row="1" Grid.Column="0" Text="Cuota Inical: " TextColor="White" FontSize="20"></Label>
+                <Entry Grid.Row="1" Grid.Column="1" x:Name="txtCuotaInicial" Placeholder="Ingresar Cuota Inicial" TextColor="White" Keyboard="Numeric" ></Entry>
+                <Label Grid.Row="2" Grid.Column="0" Text="Pago Mensual: " TextColor="White" FontSize="20" BackgroundColor="Blue"></Label>
+                <Entry Grid.Row="2" Grid.Column="1" x:Name="txtPagoMensual" Placeholder="Pago Mensual" TextColor="White" Keyboard="Numeric"  BackgroundColor="Blue" IsReadOnly="True" HorizontalTextAlignment="Center"></Entry>
+                <Button Grid.Row="3" Grid.Column="1" x:Name="btnCacular" Text="Calcular" Clicked="btnCacular_Clicked" FontSize="22" ></Button>
+            </Grid>
+            <Entry  x:Name="txtTotal" TextColor="White" IsVisible="False" ></Entry>
+            <Button x:Name="btnGuardar" Text="Guardar" Clicked="btnGuardar_Clicked" FontSize="22" ></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
